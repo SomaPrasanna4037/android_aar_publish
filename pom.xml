@@ -7,7 +7,6 @@
     <groupId>com.example</groupId> <!-- Replace with your group ID -->
     <artifactId>flutter-library</artifactId> <!-- Replace with your artifact ID -->
     <version>1.0.2</version> <!-- Replace with your library version -->
-    <packaging>aar</packaging>
 
     <name>My Flutter Library</name>
     <description>A library integrating Flutter with Android</description>
