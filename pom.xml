@@ -1,26 +1,68 @@
-  <dependencies>
-    <dependency>
-      <groupId>io.flutter</groupId>
-      <artifactId>flutter_embedding_release</artifactId>
-      <version>1.0.0-18b71d647a292a980abb405ac7d16fe1f0b20434</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.flutter</groupId>
-      <artifactId>armeabi_v7a_release</artifactId>
-      <version>1.0.0-18b71d647a292a980abb405ac7d16fe1f0b20434</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.flutter</groupId>
-      <artifactId>arm64_v8a_release</artifactId>
-      <version>1.0.0-18b71d647a292a980abb405ac7d16fe1f0b20434</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.flutter</groupId>
-      <artifactId>x86_64_release</artifactId>
-      <version>1.0.0-18b71d647a292a980abb405ac7d16fe1f0b20434</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Library Metadata -->
+    <groupId>com.example</groupId> <!-- Replace with your group ID -->
+    <artifactId>flutter-library</artifactId> <!-- Replace with your artifact ID -->
+    <version>1.0.2</version> <!-- Replace with your library version -->
+    <packaging>aar</packaging>
+
+    <name>My Flutter Library</name>
+    <description>A library integrating Flutter with Android</description>
+    <url>https://example.com</url> <!-- Replace with your project URL -->
+
+    <!-- Dependencies -->
+    <dependencies>
+        <dependency>
+            <groupId>io.flutter</groupId>
+            <artifactId>flutter_embedding_release</artifactId>
+            <version>1.0.0-18b71d647a292a980abb405ac7d16fe1f0b20434</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.flutter</groupId>
+            <artifactId>armeabi_v7a_release</artifactId>
+            <version>1.0.0-18b71d647a292a980abb405ac7d16fe1f0b20434</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.flutter</groupId>
+            <artifactId>arm64_v8a_release</artifactId>
+            <version>1.0.0-18b71d647a292a980abb405ac7d16fe1f0b20434</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.flutter</groupId>
+            <artifactId>x86_64_release</artifactId>
+            <version>1.0.0-18b71d647a292a980abb405ac7d16fe1f0b20434</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Build Settings -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- Distribution Management -->
+    <distributionManagement>
+        <repository>
+            <id>release-repo</id>
+            <url>https://repo.maven.apache.org/maven2</url> <!-- Replace with your repository URL -->
+        </repository>
+    </distributionManagement>
+
+</project>
+
