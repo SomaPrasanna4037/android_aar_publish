@@ -1,0 +1,7 @@
+jdk:
+  - openjdk17
+install:
+  - FILE1="-Dfile=android_library.aar"
+  - mvn install:install-file $FILE1 -DgroupId=com.github.SomaPrasanna4037 -DartifactId=android -Dversion=1.0 -Dpackaging=aar -DgeneratePom=true
+  - FILE2="-Dfile=flutter_library.aar"
+  - mvn install:install-file $FILE2 -DgroupId=com.github.SomaPrasanna4037 -DartifactId=flutter -Dversion=1.0 -Dpackaging=aar -DgeneratePom=true
